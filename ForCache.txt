@@ -1,0 +1,13 @@
+Archive
+VMDADatabase
+Camera
+Detector (EventSuplier)
+HostAudioNotifier
+IpDevice
+Notifier
+Ray
+Relay
+DetectorEngine
+IsServiceActive
+TelemetryChannel
+Microphone
