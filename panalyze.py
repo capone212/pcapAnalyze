@@ -9,15 +9,6 @@ def stubData(packet):
 	rawString =  ''.join(chars)
 	return filter(lambda x: x in string.printable, rawString)
 
-
-cap = pyshark.FileCapture('/home/capone/work/python/pcapAnalyze/serviceStatusesOpt/first.pcapng',
-	only_summaries=False,
-	display_filter='giop.request_op contains "resolve_str" and giop.minor_version == 2')
-
-
-for item in Counter((stubData(x) for x in cap)).most_common():
-	print item
-
 def countResolves(captureFile):	
 	print '-'*80
 	cap = pyshark.FileCapture(captureFile,
