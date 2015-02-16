@@ -29,11 +29,11 @@ def countRequests(captureFile):
 	cap.load_packets();		
 	print 'Requests count ', len(cap)
 
-	for item in Counter((x.data.giop_request_op for x in cap)).most_common():
+	for item in Counter((x.data.giop_request_op for x in cap if hasattr(x.data, 'giop_request_op'))).most_common():
 		print item
 	print ' '
 
-session = '/home/capone/work/python/pcapAnalyze/serviceStatusesOpt/first.pcapng'
+session = '/home/capone/work/python/pcapAnalyze/Load146.pcapng'
 countRequests(session)
 countResolves(session)
 print "exit"
