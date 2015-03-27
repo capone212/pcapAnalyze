@@ -33,7 +33,7 @@ def countRequests(captureFile):
 		print item
 	print ' '
 
-session = '/home/capone/work/python/pcapAnalyze/Load146.pcapng'
+session = '/home/capone/work/python/pcapAnalyze/loadVirtualDomain.pcapng'
 countRequests(session)
 countResolves(session)
 print "exit"
