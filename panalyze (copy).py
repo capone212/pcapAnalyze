@@ -2,6 +2,7 @@ import pyshark
 import string
 from collections import Counter
 from collections import namedtuple
+import sys
 
 def stubData(packet):
 	giopLayer = packet.giop
