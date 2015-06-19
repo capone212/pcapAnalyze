@@ -1,3 +1,4 @@
+import sys
 import pyshark
 import string
 from collections import Counter
@@ -29,11 +30,11 @@ def countRequests(captureFile):
 	cap.load_packets();		
 	print 'Requests count ', len(cap)
 
-	for item in Counter((x.data.giop_request_op for x in cap if hasattr(x.data, 'giop_request_op'))).most_common():
+	for item in Counter((x.data.giop_request_op for x in cap if hasattr(x.data, "giop_request_op"))).most_common():
 		print item
 	print ' '
 
-session = '/home/capone/work/python/pcapAnalyze/loadVirtualDomain.pcapng'
+session = sys.argv[1] #'/mnt/hgfs/pcaps/giop.pcapng'
 countRequests(session)
 countResolves(session)
 print "exit"
