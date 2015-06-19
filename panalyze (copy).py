@@ -68,7 +68,7 @@ def measureResponseTime(captureFile):
 	# 	print item
 	# print ' '
 
-session = '/home/capone/work/python/pcapAnalyze/1.pcapng'
+session = sys.argv[1]
 #countRequests(session)
 #countResolves(session)
 measureResponseTime(session)
